@@ -1,400 +1,537 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DMG Consultants | Professional Tax &amp; Accounting Services</title>
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Config -->
-<script id="tailwind-config">
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DMG Consultants | Professional Tax &amp; Accounting Services</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                            "surface-variant": "#e5e2e1",
-                            "secondary-fixed-dim": "#e9c176",
-                            "on-tertiary-fixed-variant": "#43474a",
-                            "inverse-on-surface": "#f3f0ef",
-                            "surface-container-high": "#eae7e7",
-                            "surface-container-highest": "#e5e2e1",
-                            "surface-container-lowest": "#ffffff",
-                            "primary-fixed": "#dbe1ff",
-                            "on-error-container": "#93000a",
-                            "primary-container": "#002366",
-                            "on-primary": "#ffffff",
-                            "on-surface-variant": "#444650",
-                            "surface-tint": "#435b9f",
-                            "outline-variant": "#c5c6d2",
-                            "secondary": "#775a19",
-                            "on-error": "#ffffff",
-                            "primary-fixed-dim": "#b3c5ff",
-                            "on-secondary-fixed-variant": "#5d4201",
-                            "background": "#fcf9f8",
-                            "on-secondary": "#ffffff",
-                            "tertiary-container": "#25292b",
-                            "surface-dim": "#dcd9d9",
-                            "outline": "#757682",
-                            "inverse-primary": "#b3c5ff",
-                            "error-container": "#ffdad6",
-                            "tertiary-fixed": "#e0e3e6",
-                            "on-tertiary": "#ffffff",
-                            "surface": "#fcf9f8",
-                            "secondary-container": "#fed488",
-                            "tertiary": "#101517",
-                            "error": "#ba1a1a",
-                            "on-primary-container": "#758dd5",
-                            "on-tertiary-fixed": "#181c1e",
-                            "surface-bright": "#fcf9f8",
-                            "on-surface": "#1c1b1b",
-                            "primary": "#00113a",
-                            "secondary-fixed": "#ffdea5",
-                            "on-secondary-fixed": "#261900",
-                            "tertiary-fixed-dim": "#c3c7ca",
-                            "on-secondary-container": "#785a1a",
-                            "surface-container": "#f0eded",
-                            "surface-container-low": "#f6f3f2",
-                            "inverse-surface": "#313030",
-                            "on-tertiary-container": "#8c9093",
-                            "on-primary-fixed": "#00174a",
-                            "on-background": "#1c1b1b",
-                            "on-primary-fixed-variant": "#2a4386"
+                        "surface-variant": "#e5e2e1",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-tertiary-fixed-variant": "#43474a",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#002366",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#444650",
+                        "surface-tint": "#435b9f",
+                        "outline-variant": "#c5c6d2",
+                        "secondary": "#775a19",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "background": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#25292b",
+                        "surface-dim": "#dcd9d9",
+                        "outline": "#757682",
+                        "inverse-primary": "#b3c5ff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e0e3e6",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "secondary-container": "#fed488",
+                        "tertiary": "#101517",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#758dd5",
+                        "on-tertiary-fixed": "#181c1e",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface": "#1c1b1b",
+                        "primary": "#00113a",
+                        "secondary-fixed": "#ffdea5",
+                        "on-secondary-fixed": "#261900",
+                        "tertiary-fixed-dim": "#c3c7ca",
+                        "on-secondary-container": "#785a1a",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-surface": "#313030",
+                        "on-tertiary-container": "#8c9093",
+                        "on-primary-fixed": "#00174a",
+                        "on-background": "#1c1b1b",
+                        "on-primary-fixed-variant": "#2a4386"
                     },
                     "borderRadius": {
-                            "DEFAULT": "0.125rem",
-                            "lg": "0.25rem",
-                            "xl": "0.5rem",
-                            "full": "0.75rem"
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
                     },
                     "spacing": {
-                            "margin-desktop": "64px",
-                            "container-max": "1280px",
-                            "margin-mobile": "16px",
-                            "gutter": "24px",
-                            "section-gap": "120px"
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
                     },
                     "fontFamily": {
-                            "body-lg": ["Work Sans"],
-                            "body-md": ["Work Sans"],
-                            "headline-sm": ["Hanken Grotesk"],
-                            "display-lg-mobile": ["Hanken Grotesk"],
-                            "label-md": ["Work Sans"],
-                            "headline-md": ["Hanken Grotesk"],
-                            "display-lg": ["Hanken Grotesk"]
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["Work Sans"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"]
                     },
                     "fontSize": {
-                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                            "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-                            "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
                     }
                 }
             }
         }
     </script>
-<style>
+    <style>
         body {
-            background-color: #fcf9f8; /* background */
-            color: #1c1b1b; /* on-background */
+            background-color: #fcf9f8;
+            /* background */
+            color: #1c1b1b;
+            /* on-background */
         }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         /* Custom minimal scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #c5c6d2; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #757682; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c5c6d2;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #757682;
+        }
     </style>
 </head>
+
 <body class="antialiased min-h-screen flex flex-col pt-20">
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-sm transition-all duration-300">
-<div class="flex items-center gap-4">
-<img alt="DMG Consultants Logo" class="h-12 w-12 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZMvkqqVe_A7Ynitd6EvmkfL2iZG_sFaI1kIHqjBkYjIUgpnRsaehtbMNi2RHgQZgiUE_QeliSczHtnbTOVdogI82G8B9rsTPE2s-6o1SHu-rRRE0V8Im60jKU4r3PzBQlPD-GGMoQL0YMz15QtF7k4MoSOpwraGHQZ55W3QB5O2eqpRiyGgPaz11xuHKhlcCnhVmwnk_15PhcJisUCgJ0gBdKWjpaf_dX5N45bdf9K8KzF-HNMWRFsYnrIc2aWmo6lF_b04a89i3k"/>
-<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:block">DMG Consultants</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md text-label-md hover:bg-surface-container-low transition-all" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all" href="services.html">Services</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all" href="about.html">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all" href="tax-updates.html">Tax Updates</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all" href="contact.html">Contact</a>
-</nav>
-<a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded shadow-sm hover:bg-primary-container transition-all scale-95 active:scale-90" href="#contact">
+    <!-- TopNavBar -->
+    <header
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-sm transition-all duration-300">
+        <div class="flex items-center gap-4">
+            <img alt="DMG Consultants Logo" class="h-12 w-12 object-contain rounded-lg"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZMvkqqVe_A7Ynitd6EvmkfL2iZG_sFaI1kIHqjBkYjIUgpnRsaehtbMNi2RHgQZgiUE_QeliSczHtnbTOVdogI82G8B9rsTPE2s-6o1SHu-rRRE0V8Im60jKU4r3PzBQlPD-GGMoQL0YMz15QtF7k4MoSOpwraGHQZ55W3QB5O2eqpRiyGgPaz11xuHKhlcCnhVmwnk_15PhcJisUCgJ0gBdKWjpaf_dX5N45bdf9K8KzF-HNMWRFsYnrIc2aWmo6lF_b04a89i3k" />
+            <span class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:block">DMG
+                Consultants</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md text-label-md hover:bg-surface-container-low transition-all"
+                href="index.html">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
+                href="services.html">Services</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
+                href="about.html">About</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
+                href="tax-updates.html">Tax Updates</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
+                href="contact.html">Contact</a>
+        </nav>
+        <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded shadow-sm hover:bg-primary-container transition-all scale-95 active:scale-90"
+            href="#contact">
             Request a Quotation
         </a>
-<!-- Mobile Menu Icon (Simplified for pure HTML) -->
-<button class="md:hidden text-primary p-2">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</header>
-<main class="flex-grow">
-<!-- Hero Section -->
-<section class="relative w-full min-h-[85vh] flex items-center justify-center pt-20 pb-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden bg-primary">
-<!-- Background Image with Overlay -->
-<div class="absolute inset-0 z-0">
-<img alt="Corporate Office" class="w-full h-full object-cover opacity-30 mix-blend-luminosity" data-alt="A highly professional and modern corporate financial office setting featuring glass partition walls, sleek dark wood executive desks, and subtle warm lighting. The atmosphere reflects prestige, trust, and authoritative success within a light-mode corporate minimalism aesthetic, dominated by deep navy structural elements and bright, pristine whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeK-ar2XYFRw2cQ_ghxUv3u80TAqxlI1-sZ1zj035JYD-1B4zacih8LP0p9NLDfUMa0gx2WY3ooWjuAwX0b_fbwyyLN45V2DPbe4CuR0KmhsEN7dSxwOaK53SzwASZMcjtkxF9bGx9Mjkm17tdDSf6dHABIUiyZQ7bynPnQoAoNX1jg3OXxsMpVXoEcqf3crk-LZ_Lg-UxerMyZTHKEPCZeOuYx_w2iF72-Uzr-33tbr9Mz1zoVPyW5PPNeG5zNrKjpk90pTy1RrPn"/>
-<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
-</div>
-<div class="relative z-10 w-full max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-span-8 space-y-8">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 border border-secondary/30 bg-secondary/10 rounded-full">
-<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">CBA &amp; AAT Certified</span>
-</div>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary">
-                        Strategic Tax &amp; Accounting Solutions <br/><span class="text-secondary-fixed-dim">Tailored for Your Growth.</span>
-</h1>
-<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl">
-                        Over 20 years of qualified excellence by CA Sri Lanka professionals. We provide high-net-worth and corporate clients with precise, authoritative financial clarity.
+        <!-- Mobile Menu Icon (Simplified for pure HTML) -->
+        <button class="md:hidden text-primary p-2">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+    </header>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section
+            class="relative w-full min-h-[85vh] flex items-center justify-center pt-20 pb-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden bg-primary">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img alt="Corporate Office" class="w-full h-full object-cover opacity-30 mix-blend-luminosity"
+                    data-alt="A highly professional and modern corporate financial office setting featuring glass partition walls, sleek dark wood executive desks, and subtle warm lighting. The atmosphere reflects prestige, trust, and authoritative success within a light-mode corporate minimalism aesthetic, dominated by deep navy structural elements and bright, pristine whites."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeK-ar2XYFRw2cQ_ghxUv3u80TAqxlI1-sZ1zj035JYD-1B4zacih8LP0p9NLDfUMa0gx2WY3ooWjuAwX0b_fbwyyLN45V2DPbe4CuR0KmhsEN7dSxwOaK53SzwASZMcjtkxF9bGx9Mjkm17tdDSf6dHABIUiyZQ7bynPnQoAoNX1jg3OXxsMpVXoEcqf3crk-LZ_Lg-UxerMyZTHKEPCZeOuYx_w2iF72-Uzr-33tbr9Mz1zoVPyW5PPNeG5zNrKjpk90pTy1RrPn" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
+            </div>
+            <div
+                class="relative z-10 w-full max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-8 space-y-8">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 border border-secondary/30 bg-secondary/10 rounded-full">
+                        <span class="material-symbols-outlined text-secondary text-sm"
+                            style="font-variation-settings: 'FILL' 1;">verified</span>
+                        <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">CBA &amp; AAT
+                            Certified</span>
+                    </div>
+                    <h1
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary">
+                        Strategic Tax &amp; Accounting Solutions <br /><span class="text-secondary-fixed-dim">Tailored
+                            for Your Growth.</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl">
+                        Over 20 years of qualified excellence by CA Sri Lanka professionals. We provide high-net-worth
+                        and corporate clients with precise, authoritative financial clarity.
                     </p>
-<div class="flex flex-col sm:flex-row gap-4 pt-4">
-<a class="inline-flex items-center justify-center px-8 py-4 bg-secondary text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT hover:bg-secondary-fixed-dim transition-all shadow-[0px_10px_30px_rgba(0,35,102,0.15)]" href="#contact">
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a class="inline-flex items-center justify-center px-8 py-4 bg-secondary text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT hover:bg-secondary-fixed-dim transition-all shadow-[0px_10px_30px_rgba(0,35,102,0.15)]"
+                            href="#contact">
                             Request a Quotation
                         </a>
-<a class="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT hover:bg-white/5 transition-all" href="#services">
+                        <a class="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT hover:bg-white/5 transition-all"
+                            href="#services">
                             Explore Services
                         </a>
-</div>
-</div>
-</div>
-</section>
-<!-- About / Experience Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" id="about">
-<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="relative">
-<div class="absolute -inset-4 bg-surface-container-low rounded-xl transform -rotate-2 z-0"></div>
-<img alt="Professional Consulting" class="relative z-10 w-full h-[600px] object-cover rounded-xl border border-outline-variant shadow-sm" data-alt="A close-up of a sophisticated business professional reviewing financial documents with a premium gold pen on a pristine white desk. The setting uses a corporate minimalist style with deep navy accents and expansive white space, lit by soft, bright natural light denoting precision and high-end consultancy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDuCdLVGrRd6LInpOmVZHv3XAxVP6QWI6fJztFyaqC4MkHB9fEhYXcVMpFuKqDV2j5-7DMLmnxv5gm3IDgltFXcyKDVgeTziLcjR267pLuqMWcQOiCCH-84Z8H5Rwo96zXOmzwWoSY28XXf6KvApUkAyYZJXIIZiobqCy1Rh_gEAmx1lvdvsPaIbpQTYG470WGhr5PUEz0dDaphzq7rcTkKCY6F7rgdEJJARsfsqHyKAxR3iqujH3nGuU402HfM1vXRLcj_yW4tPAF"/>
-<!-- Floating Badge -->
-<div class="absolute -bottom-8 -right-8 z-20 bg-primary text-on-primary p-8 rounded-DEFAULT shadow-[0px_10px_30px_rgba(0,35,102,0.15)] max-w-xs border border-primary-fixed/20">
-<span class="font-display-lg text-display-lg text-secondary-fixed-dim block mb-2">15+</span>
-<span class="font-label-md text-label-md uppercase tracking-wider block mb-2">Years Experience</span>
-<p class="font-body-md text-body-md text-primary-fixed-dim">Senior corporate expertise as Group Accountant navigating complex financial landscapes.</p>
-</div>
-</div>
-<div class="space-y-6 lg:pl-12">
-<h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Heritage of Precision</h2>
-<h3 class="font-headline-md text-headline-md text-on-surface">Authority Built on Decades of Corporate Insight</h3>
-<div class="w-16 h-px bg-secondary my-8"></div>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                        At DMG Consultants, we move beyond basic compliance. We leverage deep-seated corporate experience to engineer financial strategies that protect and expand your wealth. 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About / Experience Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" id="about">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-surface-container-low rounded-xl transform -rotate-2 z-0"></div>
+                    <img alt="Professional Consulting"
+                        class="relative z-10 w-full h-[600px] object-cover rounded-xl border border-outline-variant shadow-sm"
+                        data-alt="A close-up of a sophisticated business professional reviewing financial documents with a premium gold pen on a pristine white desk. The setting uses a corporate minimalist style with deep navy accents and expansive white space, lit by soft, bright natural light denoting precision and high-end consultancy."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDuCdLVGrRd6LInpOmVZHv3XAxVP6QWI6fJztFyaqC4MkHB9fEhYXcVMpFuKqDV2j5-7DMLmnxv5gm3IDgltFXcyKDVgeTziLcjR267pLuqMWcQOiCCH-84Z8H5Rwo96zXOmzwWoSY28XXf6KvApUkAyYZJXIIZiobqCy1Rh_gEAmx1lvdvsPaIbpQTYG470WGhr5PUEz0dDaphzq7rcTkKCY6F7rgdEJJARsfsqHyKAxR3iqujH3nGuU402HfM1vXRLcj_yW4tPAF" />
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute -bottom-8 -right-8 z-20 bg-primary text-on-primary p-8 rounded-DEFAULT shadow-[0px_10px_30px_rgba(0,35,102,0.15)] max-w-xs border border-primary-fixed/20">
+                        <span class="font-display-lg text-display-lg text-secondary-fixed-dim block mb-2">15+</span>
+                        <span class="font-label-md text-label-md uppercase tracking-wider block mb-2">Years
+                            Experience</span>
+                        <p class="font-body-md text-body-md text-primary-fixed-dim">Senior corporate expertise as Group
+                            Accountant navigating complex financial landscapes.</p>
+                    </div>
+                </div>
+                <div class="space-y-6 lg:pl-12">
+                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Heritage of
+                        Precision</h2>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Authority Built on Decades of
+                        Corporate Insight</h3>
+                    <div class="w-16 h-px bg-secondary my-8"></div>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        At DMG Consultants, we move beyond basic compliance. We leverage deep-seated corporate
+                        experience to engineer financial strategies that protect and expand your wealth.
                     </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                        Our leadership brings over 15 years of rigorous, high-stakes experience as a Group Accountant, ensuring that every piece of advice is grounded in practical, real-world corporate success. We treat your financial architecture with the architectural precision it deserves.
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Our leadership brings over 15 years of rigorous, high-stakes experience as a Group Accountant,
+                        ensuring that every piece of advice is grounded in practical, real-world corporate success. We
+                        treat your financial architecture with the architectural precision it deserves.
                     </p>
-<ul class="space-y-4 pt-6">
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Comprehensive corporate tax structuring.</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">End-to-end accounting and financial reporting.</span>
-</li>
-<li class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary">check_circle</span>
-<span class="font-body-md text-body-md text-on-surface">Strict adherence to national compliance standards.</span>
-</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- Services Section (Bento Grid) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="services">
-<div class="max-w-container-max mx-auto">
-<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-<h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Core Capabilities</h2>
-<h3 class="font-headline-md text-headline-md text-on-surface">Precision Engineered Services</h3>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Service 1 -->
-<div class="bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-colors duration-300 group flex flex-col h-full rounded-DEFAULT shadow-sm">
-<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center rounded-DEFAULT mb-6 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">account_balance</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Corporate Taxation</h4>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Strategic tax planning and minimization strategies designed for high-net-worth entities and expanding corporations.</p>
-<a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors" href="services.html">
+                    <ul class="space-y-4 pt-6">
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span class="font-body-md text-body-md text-on-surface">Comprehensive corporate tax
+                                structuring.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span class="font-body-md text-body-md text-on-surface">End-to-end accounting and financial
+                                reporting.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span class="font-body-md text-body-md text-on-surface">Strict adherence to national
+                                compliance standards.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section (Bento Grid) -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="services">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Core
+                        Capabilities</h2>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Precision Engineered Services</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Service 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-colors duration-300 group flex flex-col h-full rounded-DEFAULT shadow-sm">
+                        <div
+                            class="w-16 h-16 bg-surface-container-low flex items-center justify-center rounded-DEFAULT mb-6 group-hover:bg-primary transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">account_balance</span>
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Corporate Taxation</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Strategic tax planning
+                            and minimization strategies designed for high-net-worth entities and expanding corporations.
+                        </p>
+                        <a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors"
+                            href="services.html">
                             Discover More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Service 2 -->
-<div class="bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-colors duration-300 group flex flex-col h-full rounded-DEFAULT shadow-sm relative overflow-hidden">
-<!-- Accent Bar -->
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center rounded-DEFAULT mb-6 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">gavel</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Statutory Compliance</h4>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Bulletproof adherence to CA Sri Lanka and national regulatory frameworks, insulating your business from liability.</p>
-<a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors" href="services.html">
+                        </a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-colors duration-300 group flex flex-col h-full rounded-DEFAULT shadow-sm relative overflow-hidden">
+                        <!-- Accent Bar -->
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-secondary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500">
+                        </div>
+                        <div
+                            class="w-16 h-16 bg-surface-container-low flex items-center justify-center rounded-DEFAULT mb-6 group-hover:bg-primary transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">gavel</span>
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Statutory Compliance</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Bulletproof adherence to
+                            CA Sri Lanka and national regulatory frameworks, insulating your business from liability.
+                        </p>
+                        <a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors"
+                            href="services.html">
                             Discover More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<!-- Service 3 -->
-<div class="bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-colors duration-300 group flex flex-col h-full rounded-DEFAULT shadow-sm">
-<div class="w-16 h-16 bg-surface-container-low flex items-center justify-center rounded-DEFAULT mb-6 group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">calculate</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Executive Accounting</h4>
-<p class="font-body-md text-body-md text-on-surface-variant flex-grow">High-level financial reporting and ledger management utilizing pure, tabular data for immediate executive clarity.</p>
-<a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors" href="services.html">
+                        </a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 border border-outline-variant hover:border-secondary transition-colors duration-300 group flex flex-col h-full rounded-DEFAULT shadow-sm">
+                        <div
+                            class="w-16 h-16 bg-surface-container-low flex items-center justify-center rounded-DEFAULT mb-6 group-hover:bg-primary transition-colors">
+                            <span
+                                class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">calculate</span>
+                        </div>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Executive Accounting</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">High-level financial
+                            reporting and ledger management utilizing pure, tabular data for immediate executive
+                            clarity.</p>
+                        <a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors"
+                            href="services.html">
                             Discover More <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Latest Tax Updates (Minimalist List) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" id="updates">
-<div class="max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-12 pb-4 border-b border-outline-variant">
-<div>
-<h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest mb-2">Insight &amp; Analysis</h2>
-<h3 class="font-headline-md text-headline-md text-on-surface">Latest Tax Updates</h3>
-</div>
-<a class="mt-4 md:mt-0 font-label-md text-label-md text-primary hover:text-secondary inline-flex items-center gap-2" href="#updates">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest Tax Updates (Minimalist List) -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface" id="updates">
+            <div class="max-w-container-max mx-auto">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-end mb-12 pb-4 border-b border-outline-variant">
+                    <div>
+                        <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest mb-2">
+                            Insight &amp; Analysis</h2>
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Latest Tax Updates</h3>
+                    </div>
+                    <a class="mt-4 md:mt-0 font-label-md text-label-md text-primary hover:text-secondary inline-flex items-center gap-2"
+                        href="#updates">
                         View All Updates <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<!-- Update Item -->
-<article class="group cursor-pointer">
-<div class="overflow-hidden rounded-DEFAULT mb-6 border border-outline-variant">
-<img alt="Financial Chart" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A close-up of a complex financial document displaying tabular data and charts, resting on a sleek corporate desk. The image embodies precision and high-level analysis, cast in a modern light-mode aesthetic with subtle deep navy and brushed gold elements in the periphery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Ul4LqWLhRRs966qAWQoduF9bNXBhDhqBLGbXiDJUpm4DycPjfMD2ufuUUQcFzx4_QGj_c2k8-t5jQ4QIle63kYN6vgVXKYtSZnXerPyEjbeAlcPrtT3XwGjXtbmQSAVHFYIrH710x1Q_BfXMMTrDxMaVFV2Wa-FtoD_prpyhYVmGPdl4_ivabra0ux2t8nJDw4Pai65VoVarG8PVs_arOCbJ5PpwRs1HWpXziP38NYZNN9GoQNkrox4y4I-qbfs2hiLWoosPcKXm"/>
-</div>
-<div class="flex items-center gap-4 mb-3">
-<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">Taxation</span>
-<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
-<span class="font-label-md text-label-md text-on-surface-variant">October 15, 2024</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Implications of the New VAT Amendments for Corporate Entities</h4>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">An executive summary of how the recent changes to Value Added Tax legislation will impact corporate cash flows in the upcoming fiscal quarter.</p>
-</article>
-<!-- Update Item -->
-<article class="group cursor-pointer">
-<div class="overflow-hidden rounded-DEFAULT mb-6 border border-outline-variant">
-<img alt="Corporate Architecture" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A minimalist architectural detail of a modern corporate headquarters, featuring clean lines, expansive glass, and pristine white structural columns against a clear sky. The visual communicates stability, corporate heritage, and forward-thinking structure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9yDTonQJBNjiHdTwpK0fpf6h8EvppVjlK7zL8_1izjxZLRpqqEcv9wiLRIlspQCn11OJbjGj45U_8h7-GV6g7HsMz87Rxa3hQ1-Qq3ocfsU5ZEZpwn7UgBh-iYDL7m-IX5rCawCL0HsSlTm8dUoI8f7EFbTe8D_uzx7Y68YT3YOaHOKntthAUUOCdLl-PwqXklhoWiUAeeePKJOkrU4l45bUdxFH__StJNhcaAzWKi9BU8uFt9T5yB8hC-17YQx-gJZZRrXr1hSxn"/>
-</div>
-<div class="flex items-center gap-4 mb-3">
-<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">Compliance</span>
-<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
-<span class="font-label-md text-label-md text-on-surface-variant">October 02, 2024</span>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">Navigating CA Sri Lanka's Updated Reporting Standards</h4>
-<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A breakdown of the critical adjustments required for annual financial reports to maintain absolute compliance with the revised national guidelines.</p>
-</article>
-</div>
-</div>
-</section>
-<!-- Contact Form / Quotation (Asymmetric Layout) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-primary text-on-primary" id="contact">
-<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
-<!-- Contact Info -->
-<div class="lg:col-span-5 space-y-8">
-<h2 class="font-headline-sm text-headline-sm text-secondary-fixed-dim uppercase tracking-widest">Engage Our Firm</h2>
-<h3 class="font-display-lg-mobile text-display-lg-mobile text-on-primary">Secure a Professional Consultation.</h3>
-<p class="font-body-lg text-body-lg text-primary-fixed-dim pb-8">
-                        Connect with DMG Consultants to establish a bespoke financial strategy tailored to your exact corporate or individual requirements.
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Update Item -->
+                    <article class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-DEFAULT mb-6 border border-outline-variant">
+                            <img alt="Financial Chart"
+                                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A close-up of a complex financial document displaying tabular data and charts, resting on a sleek corporate desk. The image embodies precision and high-level analysis, cast in a modern light-mode aesthetic with subtle deep navy and brushed gold elements in the periphery."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Ul4LqWLhRRs966qAWQoduF9bNXBhDhqBLGbXiDJUpm4DycPjfMD2ufuUUQcFzx4_QGj_c2k8-t5jQ4QIle63kYN6vgVXKYtSZnXerPyEjbeAlcPrtT3XwGjXtbmQSAVHFYIrH710x1Q_BfXMMTrDxMaVFV2Wa-FtoD_prpyhYVmGPdl4_ivabra0ux2t8nJDw4Pai65VoVarG8PVs_arOCbJ5PpwRs1HWpXziP38NYZNN9GoQNkrox4y4I-qbfs2hiLWoosPcKXm" />
+                        </div>
+                        <div class="flex items-center gap-4 mb-3">
+                            <span
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase">Taxation</span>
+                            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">October 15, 2024</span>
+                        </div>
+                        <h4
+                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            Implications of the New VAT Amendments for Corporate Entities</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">An executive summary
+                            of how the recent changes to Value Added Tax legislation will impact corporate cash flows in
+                            the upcoming fiscal quarter.</p>
+                    </article>
+                    <!-- Update Item -->
+                    <article class="group cursor-pointer">
+                        <div class="overflow-hidden rounded-DEFAULT mb-6 border border-outline-variant">
+                            <img alt="Corporate Architecture"
+                                class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A minimalist architectural detail of a modern corporate headquarters, featuring clean lines, expansive glass, and pristine white structural columns against a clear sky. The visual communicates stability, corporate heritage, and forward-thinking structure."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9yDTonQJBNjiHdTwpK0fpf6h8EvppVjlK7zL8_1izjxZLRpqqEcv9wiLRIlspQCn11OJbjGj45U_8h7-GV6g7HsMz87Rxa3hQ1-Qq3ocfsU5ZEZpwn7UgBh-iYDL7m-IX5rCawCL0HsSlTm8dUoI8f7EFbTe8D_uzx7Y68YT3YOaHOKntthAUUOCdLl-PwqXklhoWiUAeeePKJOkrU4l45bUdxFH__StJNhcaAzWKi9BU8uFt9T5yB8hC-17YQx-gJZZRrXr1hSxn" />
+                        </div>
+                        <div class="flex items-center gap-4 mb-3">
+                            <span
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase">Compliance</span>
+                            <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                            <span class="font-label-md text-label-md text-on-surface-variant">October 02, 2024</span>
+                        </div>
+                        <h4
+                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            Navigating CA Sri Lanka's Updated Reporting Standards</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A breakdown of the
+                            critical adjustments required for annual financial reports to maintain absolute compliance
+                            with the revised national guidelines.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form / Quotation (Asymmetric Layout) -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-primary text-on-primary" id="contact">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Contact Info -->
+                <div class="lg:col-span-5 space-y-8">
+                    <h2 class="font-headline-sm text-headline-sm text-secondary-fixed-dim uppercase tracking-widest">
+                        Engage Our Firm</h2>
+                    <h3 class="font-display-lg-mobile text-display-lg-mobile text-on-primary">Secure a Professional
+                        Consultation.</h3>
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim pb-8">
+                        Connect with DMG Consultants to establish a bespoke financial strategy tailored to your exact
+                        corporate or individual requirements.
                     </p>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">location_on</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Corporate Office</h4>
-<p class="font-body-md text-body-md text-primary-fixed-dim">Ragama, Sri Lanka</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">mail</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Direct Communication</h4>
-<p class="font-body-md text-body-md text-primary-fixed-dim">inquiries@dmgconsultants.lk</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">phone_in_talk</span>
-<div>
-<h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Consultation Line</h4>
-<p class="font-body-md text-body-md text-primary-fixed-dim">+94 11 234 5678</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Form -->
-<div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-DEFAULT shadow-[0px_10px_30px_rgba(0,35,102,0.15)] text-on-surface relative">
-<form class="space-y-8">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="relative group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="firstName">First Name</label>
-<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors" id="firstName" placeholder="Enter your first name" type="text"/>
-</div>
-<div class="relative group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="lastName">Last Name</label>
-<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors" id="lastName" placeholder="Enter your last name" type="text"/>
-</div>
-</div>
-<div class="relative group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="email">Corporate Email</label>
-<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors" id="email" placeholder="name@company.com" type="email"/>
-</div>
-<div class="relative group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="service">Service of Interest</label>
-<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors text-on-surface" id="service">
-<option disabled="" selected="" value="">Select a primary service</option>
-<option value="tax">Corporate Taxation</option>
-<option value="compliance">Statutory Compliance</option>
-<option value="accounting">Executive Accounting</option>
-<option value="other">Other Inquiry</option>
-</select>
-</div>
-<div class="relative group">
-<label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="message">Brief Context</label>
-<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors resize-none" id="message" placeholder="Provide details regarding your financial requirements..." rows="3"></textarea>
-</div>
-<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-container transition-colors shadow-sm mt-4" type="submit">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">location_on</span>
+                            <div>
+                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Corporate Office
+                                </h4>
+                                <p class="font-body-md text-body-md text-primary-fixed-dim">Ragama, Sri Lanka</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">mail</span>
+                            <div>
+                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Direct
+                                    Communication</h4>
+                                <p class="font-body-md text-body-md text-primary-fixed-dim">dmgtaxconsultants@google.com
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span
+                                class="material-symbols-outlined text-secondary-fixed-dim text-2xl">phone_in_talk</span>
+                            <div>
+                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Consultation Line
+                                </h4>
+                                <p class="font-body-md text-body-md text-primary-fixed-dim">0782337999</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Form -->
+                <div
+                    class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-DEFAULT shadow-[0px_10px_30px_rgba(0,35,102,0.15)] text-on-surface relative">
+                    <form class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="relative group">
+                                <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
+                                    for="firstName">First Name</label>
+                                <input
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
+                                    id="firstName" placeholder="Enter your first name" type="text" />
+                            </div>
+                            <div class="relative group">
+                                <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
+                                    for="lastName">Last Name</label>
+                                <input
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
+                                    id="lastName" placeholder="Enter your last name" type="text" />
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
+                                for="email">Corporate Email</label>
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
+                                id="email" placeholder="name@company.com" type="email" />
+                        </div>
+                        <div class="relative group">
+                            <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
+                                for="service">Service of Interest</label>
+                            <select
+                                class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors text-on-surface"
+                                id="service">
+                                <option disabled="" selected="" value="">Select a primary service</option>
+                                <option value="tax">Corporate Taxation</option>
+                                <option value="compliance">Statutory Compliance</option>
+                                <option value="accounting">Executive Accounting</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="relative group">
+                            <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
+                                for="message">Brief Context</label>
+                            <textarea
+                                class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors resize-none"
+                                id="message" placeholder="Provide details regarding your financial requirements..."
+                                rows="3"></textarea>
+                        </div>
+                        <button
+                            class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-container transition-colors shadow-sm mt-4"
+                            type="submit">
                             Submit Request
                         </button>
-</form>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-secondary-fixed font-body-md text-body-md border-t border-on-primary-fixed-variant">
-<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
-<span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">DMG Consultants</span>
-<p class="text-on-primary/80 opacity-80 hover:opacity-100 transition-opacity max-w-xs">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-secondary-fixed font-body-md text-body-md border-t border-on-primary-fixed-variant">
+        <div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+            <span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">DMG Consultants</span>
+            <p class="text-on-primary/80 opacity-80 hover:opacity-100 transition-opacity max-w-xs">
                 © 2024 DMG Consultants. Professional Tax &amp; Accounting Services. Ragama, Sri Lanka.
             </p>
-</div>
-<div class="col-span-1 flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Navigation</h4>
-<a class="text-secondary-fixed font-bold hover:underline decoration-secondary-fixed" href="index.html">Home</a>
-<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed" href="services.html">Services</a>
-<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed" href="about.html">About</a>
-</div>
-<div class="col-span-1 flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Resources</h4>
-<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed" href="tax-updates.html">Tax Updates</a>
-<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed" href="contact.html">Contact</a>
-</div>
-<div class="col-span-1 flex flex-col gap-3">
-<h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Legal</h4>
-<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed" href="#">Privacy Policy</a>
-<a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed" href="#">Terms of Service</a>
-</div>
-</footer>
-</body></html>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Navigation</h4>
+            <a class="text-secondary-fixed font-bold hover:underline decoration-secondary-fixed"
+                href="index.html">Home</a>
+            <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
+                href="services.html">Services</a>
+            <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
+                href="about.html">About</a>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Resources</h4>
+            <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
+                href="tax-updates.html">Tax Updates</a>
+            <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
+                href="contact.html">Contact</a>
+        </div>
+        <div class="col-span-1 flex flex-col gap-3">
+            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Legal</h4>
+            <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
+                href="#">Privacy Policy</a>
+            <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
+                href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+
+</html>
