@@ -444,21 +444,21 @@
                 <!-- Form -->
                 <div
                     class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-DEFAULT shadow-[0px_10px_30px_rgba(0,35,102,0.15)] text-on-surface relative">
-                    <form class="space-y-8">
+                    <form class="space-y-8" action="https://formsubmit.co/dmgtaxconsultants@gmail.com" method="POST">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="relative group">
                                 <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
                                     for="firstName">First Name</label>
                                 <input
                                     class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
-                                    id="firstName" placeholder="Enter your first name" type="text" />
+                                    id="firstName" name="First Name" placeholder="Enter your first name" type="text" required />
                             </div>
                             <div class="relative group">
                                 <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
                                     for="lastName">Last Name</label>
                                 <input
                                     class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
-                                    id="lastName" placeholder="Enter your last name" type="text" />
+                                    id="lastName" name="Last Name" placeholder="Enter your last name" type="text" required />
                             </div>
                         </div>
                         <div class="relative group">
@@ -466,14 +466,14 @@
                                 for="email">Corporate Email</label>
                             <input
                                 class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
-                                id="email" placeholder="name@company.com" type="email" />
+                                id="email" name="email" placeholder="name@company.com" type="email" required />
                         </div>
                         <div class="relative group">
                             <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
                                 for="service">Service of Interest</label>
                             <select
                                 class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors text-on-surface"
-                                id="service">
+                                id="service" name="Service" required>
                                 <option disabled="" selected="" value="">Select a primary service</option>
                                 <option value="tax">Corporate Taxation</option>
                                 <option value="compliance">Statutory Compliance</option>
@@ -486,8 +486,8 @@
                                 for="message">Brief Context</label>
                             <textarea
                                 class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors resize-none"
-                                id="message" placeholder="Provide details regarding your financial requirements..."
-                                rows="3"></textarea>
+                                id="message" name="Message" placeholder="Provide details regarding your financial requirements..."
+                                rows="3" required></textarea>
                         </div>
                         <button
                             class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-container transition-colors shadow-sm mt-4"
