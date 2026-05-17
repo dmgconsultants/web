@@ -496,33 +496,48 @@ function setupNavigationInteractions() {
     document.body.appendChild(drawer);
 
     // --- 2. Injected Desktop Language Selector in Navbar ---
-    // Look for the "Request a Quotation" button to inject the toggle right next to it
-    const quoteButtons = document.querySelectorAll('a[href*="contact"], a[href*="quotation"]');
-    quoteButtons.forEach(btn => {
-        // Only target desktop-visible button
-        if (btn.classList.contains('hidden') || btn.parentElement?.classList.contains('hidden')) {
-            // Check if it's index.html pattern or contact.html pattern
-        }
-        
-        // Find the wrapper container in headers
-        const header = btn.closest('header') || btn.closest('nav');
+    // Locate the "Request a Quotation" button using its data-key
+    const quoteBtn = document.querySelector('[data-key="nav_btn_quote"]');
+    if (quoteBtn) {
+        // Find header or nav
+        const header = quoteBtn.closest('header') || quoteBtn.closest('nav');
         if (header && !header.querySelector('.lang-pill-desktop')) {
-            const toggleContainer = document.createElement("div");
-            toggleContainer.className = "lang-pill-desktop hidden md:flex items-center bg-surface-container-high dark:bg-surface-container border border-outline-variant rounded-full p-1 mr-4 select-none";
-            toggleContainer.innerHTML = `
-                <button data-lang-switch="en" class="px-3 py-1.5 text-xs font-bold rounded-full transition-all duration-300 text-on-surface-variant hover:text-primary">EN</button>
-                <button data-lang-switch="si" class="px-3 py-1.5 text-xs font-bold rounded-full transition-all duration-300 text-on-surface-variant hover:text-primary">සිංහල</button>
+            // Find outermost desktop container for quoteBtn if it's wrapped
+            const desktopTarget = quoteBtn.closest('.hidden.md\\:block') || quoteBtn;
+            
+            const desktopToggle = document.createElement("div");
+            desktopToggle.className = "lang-pill-desktop hidden md:flex items-center bg-surface-container-high dark:bg-surface-container border border-outline-variant rounded-full p-0.5 ml-4 select-none transition-all duration-300 shadow-sm hover:shadow-md";
+            desktopToggle.innerHTML = `
+                <button data-lang-switch="en" class="px-3.5 py-1 text-xs font-bold rounded-full transition-all duration-300 text-on-surface-variant hover:text-primary">EN</button>
+                <button data-lang-switch="si" class="px-3.5 py-1 text-xs font-bold rounded-full transition-all duration-300 text-on-surface-variant hover:text-primary">සිංහල</button>
             `;
-            // Insert before the quote button or wrapper
-            if (btn.parentElement && btn.parentElement !== header && !btn.classList.contains('bg-primary')) {
-                btn.parentElement.insertBefore(toggleContainer, btn);
-            } else {
-                btn.parentNode.insertBefore(toggleContainer, btn);
-            }
+            // Insert immediately after the desktop quotation button/wrapper
+            desktopTarget.parentNode.insertBefore(desktopToggle, desktopTarget.nextSibling);
         }
-    });
+    }
 
-    // --- 3. Click Event Hooks for Language Toggle Buttons ---
+    // --- 3. Injected Mobile Language Selector in Navbar ---
+    const headerEl = document.querySelector('header, nav');
+    if (headerEl && !headerEl.querySelector('.lang-pill-mobile')) {
+        const mobileMenuBtn = headerEl.querySelector('button.md\\:hidden') || 
+                              Array.from(headerEl.querySelectorAll('button')).find(btn => 
+                                  btn.querySelector('.material-symbols-outlined')?.textContent.trim() === 'menu' || 
+                                  btn.classList.contains('md:hidden')
+                              );
+
+        if (mobileMenuBtn) {
+            const mobileToggle = document.createElement("div");
+            mobileToggle.className = "lang-pill-mobile flex md:hidden items-center bg-surface-container-high dark:bg-surface-container border border-outline-variant rounded-full p-0.5 mr-2 select-none transition-all duration-300";
+            mobileToggle.innerHTML = `
+                <button data-lang-switch="en" class="px-2.5 py-0.5 text-[10px] font-bold rounded-full transition-all duration-300 text-on-surface-variant hover:text-primary">EN</button>
+                <button data-lang-switch="si" class="px-2.5 py-0.5 text-[10px] font-bold rounded-full transition-all duration-300 text-on-surface-variant hover:text-primary">සිංහල</button>
+            `;
+            // Insert immediately before the hamburger menu button
+            mobileMenuBtn.parentNode.insertBefore(mobileToggle, mobileMenuBtn);
+        }
+    }
+
+    // --- 4. Click Event Hooks for Language Toggle Buttons ---
     const allLangButtons = document.querySelectorAll('[data-lang-switch]');
     allLangButtons.forEach(btn => {
         btn.addEventListener("click", () => {
@@ -531,8 +546,7 @@ function setupNavigationInteractions() {
         });
     });
 
-    // --- 4. Hamburger / Close Drawer Event Hooks ---
-    // Locate the hamburger menu button
+    // --- 5. Hamburger / Close Drawer Event Hooks ---
     const mobileMenuBtn = document.querySelector('button.md\\:hidden') || 
                           Array.from(document.querySelectorAll('button')).find(btn => 
                               btn.querySelector('.material-symbols-outlined')?.textContent.trim() === 'menu' || 
@@ -540,7 +554,6 @@ function setupNavigationInteractions() {
                           );
 
     if (mobileMenuBtn) {
-        // Prevent default hamburger page redirects, override with sliding drawer
         mobileMenuBtn.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
