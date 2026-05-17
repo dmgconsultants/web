@@ -117,6 +117,7 @@
             -webkit-font-smoothing: antialiased;
         }
     </style>
+    <script src="js/language.js" defer></script>
 </head>
 
 <body class="bg-background text-on-background font-body-md antialiased pt-20">
@@ -132,18 +133,18 @@
         </a>
         <div class="hidden md:flex gap-8 items-center">
             <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                href="index.html">Home</a>
+                href="index.html" data-key="nav_home">Home</a>
             <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                href="services.html">Services</a>
+                href="services.html" data-key="nav_services">Services</a>
             <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                href="about.html">About</a>
+                href="about.html" data-key="nav_about">About</a>
             <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary dark:border-secondary-fixed-dim pb-1 font-bold hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2"
-                href="tax-updates.html">Tax Updates</a>
+                href="tax-updates.html" data-key="nav_tax_updates">Tax Updates</a>
             <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                href="contact.html">Contact</a>
+                href="contact.html" data-key="nav_contact">Contact</a>
         </div>
         <a href="contact.html"
-            class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-md text-label-md hover:opacity-90 transition-opacity">Request
+            class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-md text-label-md hover:opacity-90 transition-opacity" data-key="nav_btn_quote">Request
             a Quotation</a>
         <button class="md:hidden text-primary p-2">
             <span class="material-symbols-outlined">menu</span>
@@ -163,13 +164,13 @@
             </div>
             <div class="relative z-10 w-full max-w-container-max mx-auto text-center space-y-6">
                 <span
-                    class="font-label-md text-label-md text-secondary border border-secondary px-3 py-1 rounded-DEFAULT inline-block">INSIGHTS
+                    class="font-label-md text-label-md text-secondary border border-secondary px-3 py-1 rounded-DEFAULT inline-block" data-key="tax_hero_tag">INSIGHTS
                     &amp; REGULATION</span>
                 <h1
-                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary">
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary" data-key="tax_hero_title">
                     Tax Updates &amp; <span class="text-secondary-fixed-dim">Insights</span>
                 </h1>
-                <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mx-auto">
+                <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl mx-auto" data-key="tax_hero_desc">
                     Stay informed with the latest regulatory changes, circulars, and strategic tax analyses from DMG
                     Consultants and the Inland Revenue Department.
                 </p>
@@ -181,11 +182,11 @@
             class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low border-b border-outline-variant/30">
             <div class="max-w-container-max mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Official
+                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest" data-key="tax_ird_section_subtitle">Official
                         Resources</h2>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Inland Revenue Department (IRD)
+                    <h3 class="font-headline-md text-headline-md text-on-surface" data-key="tax_ird_section_title">Inland Revenue Department (IRD)
                         Updates</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Direct access to the latest notices,
+                    <p class="font-body-md text-body-md text-on-surface-variant" data-key="tax_ird_section_desc">Direct access to the latest notices,
                         forms, and circulars from the official Sri Lankan tax authority.</p>
                 </div>
 
@@ -194,39 +195,38 @@
                     <div
                         class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                         <div class="bg-[#8b0000] text-white p-6 border-b-4 border-[#ffb300]">
-                            <h4 class="font-headline-sm text-headline-sm flex items-center gap-3">
+                            <h4 class="font-headline-sm text-headline-sm flex items-center gap-3" data-key="tax_ird_card1_title">
                                 <span class="material-symbols-outlined">campaign</span> Latest News &amp; Notices
                             </h4>
                         </div>
                         <div class="p-8 space-y-6">
-                            <p class="font-body-md text-body-md text-on-surface-variant">
+                            <p class="font-body-md text-body-md text-on-surface-variant" data-key="tax_ird_card1_desc">
                                 Access real-time announcements regarding tax payment deadlines, new implementations
                                 (APIT, AIT, WHT), and other critical regulatory notices straight from the IRD portal.
                             </p>
                             <a href="https://www.ird.gov.lk/en/sitepages/News%20and%20Notices.aspx" target="_blank"
                                 rel="noopener noreferrer"
-                                class="inline-flex items-center gap-2 px-6 py-3 bg-[#ffb300] text-black font-label-md text-label-md font-bold uppercase tracking-wider rounded hover:bg-[#e6a200] transition-colors shadow-sm">
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-[#ffb300] text-black font-label-md text-label-md font-bold uppercase tracking-wider rounded hover:bg-[#e6a200] transition-colors shadow-sm" data-key="tax_ird_card1_btn">
                                 View More on IRD <span class="material-symbols-outlined text-sm">open_in_new</span>
                             </a>
                         </div>
                     </div>
-
                     <!-- Latest Content -->
                     <div
                         class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                         <div class="bg-[#8b0000] text-white p-6 border-b-4 border-[#ffb300]">
-                            <h4 class="font-headline-sm text-headline-sm flex items-center gap-3">
+                            <h4 class="font-headline-sm text-headline-sm flex items-center gap-3" data-key="tax_ird_card2_title">
                                 <span class="material-symbols-outlined">article</span> Latest Content
                             </h4>
                         </div>
                         <div class="p-8 space-y-6">
-                            <p class="font-body-md text-body-md text-on-surface-variant">
+                            <p class="font-body-md text-body-md text-on-surface-variant" data-key="tax_ird_card2_desc">
                                 Download updated schedule files, verification tools, circulars to specific instructions,
                                 and templates directly from the official IRD repository.
                             </p>
                             <a href="https://www.ird.gov.lk/en/sitepages/Latest%20Content%20Listing.aspx"
                                 target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center gap-2 px-6 py-3 bg-[#ffb300] text-black font-label-md text-label-md font-bold uppercase tracking-wider rounded hover:bg-[#e6a200] transition-colors shadow-sm">
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-[#ffb300] text-black font-label-md text-label-md font-bold uppercase tracking-wider rounded hover:bg-[#e6a200] transition-colors shadow-sm" data-key="tax_ird_card2_btn">
                                 View More on IRD <span class="material-symbols-outlined text-sm">open_in_new</span>
                             </a>
                         </div>
@@ -241,9 +241,9 @@
                 <div
                     class="flex flex-col md:flex-row justify-between items-end mb-12 pb-4 border-b border-outline-variant">
                     <div>
-                        <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest mb-2">
+                        <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest mb-2" data-key="tax_expert_section_subtitle">
                             Expert Analysis</h2>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">DMG Consultants Insights</h3>
+                        <h3 class="font-headline-md text-headline-md text-on-surface" data-key="tax_expert_section_title">DMG Consultants Insights</h3>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -256,18 +256,17 @@
                         </div>
                         <div class="flex items-center gap-4 mb-3">
                             <span
-                                class="font-label-md text-label-md text-secondary tracking-widest uppercase">Taxation</span>
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase" data-key="tax_expert_art1_tag">Taxation</span>
                             <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
-                            <span class="font-label-md text-label-md text-on-surface-variant">October 15, 2024</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant" data-key="tax_expert_art1_date">October 15, 2024</span>
                         </div>
                         <h4
-                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors" data-key="tax_expert_art1_title">
                             Implications of the New VAT Amendments for Corporate Entities</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">An executive summary
+                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2" data-key="tax_expert_art1_desc">An executive summary
                             of how the recent changes to Value Added Tax legislation will impact corporate cash flows in
                             the upcoming fiscal quarter.</p>
                     </article>
-
                     <!-- Update Item 2 -->
                     <article class="group cursor-pointer">
                         <div class="overflow-hidden rounded-DEFAULT mb-6 border border-outline-variant">
@@ -277,14 +276,14 @@
                         </div>
                         <div class="flex items-center gap-4 mb-3">
                             <span
-                                class="font-label-md text-label-md text-secondary tracking-widest uppercase">Compliance</span>
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase" data-key="tax_expert_art2_tag">Compliance</span>
                             <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
-                            <span class="font-label-md text-label-md text-on-surface-variant">October 02, 2024</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant" data-key="tax_expert_art2_date">October 02, 2024</span>
                         </div>
                         <h4
-                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors" data-key="tax_expert_art2_title">
                             Navigating CA Sri Lanka's Updated Reporting Standards</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A breakdown of the
+                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2" data-key="tax_expert_art2_desc">A breakdown of the
                             critical adjustments required for annual financial reports to maintain absolute compliance
                             with the revised national guidelines.</p>
                     </article>
@@ -298,34 +297,34 @@
     <footer
         class="bg-primary dark:bg-tertiary w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter border-t border-on-primary-fixed-variant">
         <div class="col-span-1 md:col-span-2">
-            <div class="font-headline-sm text-headline-sm font-bold text-secondary-fixed mb-4">DMG Consultants</div>
-            <p class="font-body-md text-body-md text-on-primary/80 mb-6 max-w-sm">Professional Tax &amp; Accounting
+            <div class="font-headline-sm text-headline-sm font-bold text-secondary-fixed mb-4" data-key="footer_company_name">DMG Consultants</div>
+            <p class="font-body-md text-body-md text-on-primary/80 mb-6 max-w-sm" data-key="footer_tagline">Professional Tax &amp; Accounting
                 Services. Ragama, Sri Lanka.</p>
-            <p class="font-body-md text-body-md text-secondary-fixed">© 2026 DMG Consultants. Professional Tax &amp;
+            <p class="font-body-md text-body-md text-secondary-fixed" data-key="footer_copyright">© 2026 DMG Consultants. Professional Tax &amp;
                 Accounting Services. Ragama, Sri Lanka.</p>
         </div>
         <div>
-            <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider">Navigation</h4>
+            <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider" data-key="footer_nav_header">Navigation</h4>
             <ul class="space-y-3 font-body-md text-body-md">
                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="index.html">Home</a></li>
+                        href="index.html" data-key="nav_home">Home</a></li>
                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="services.html">Services</a></li>
+                        href="services.html" data-key="nav_services">Services</a></li>
                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="about.html">About</a></li>
+                        href="about.html" data-key="nav_about">About</a></li>
                 <li><a class="text-secondary-fixed font-bold opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="tax-updates.html">Tax Updates</a></li>
+                        href="tax-updates.html" data-key="nav_tax_updates">Tax Updates</a></li>
                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="contact.html">Contact</a></li>
+                        href="contact.html" data-key="nav_contact">Contact</a></li>
             </ul>
         </div>
         <div>
-            <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider">Legal</h4>
+            <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider" data-key="footer_legal_header">Legal</h4>
             <ul class="space-y-3 font-body-md text-body-md">
                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="#">Privacy Policy</a></li>
+                        href="#" data-key="footer_privacy">Privacy Policy</a></li>
                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                        href="#">Terms of Service</a></li>
+                        href="#" data-key="footer_terms">Terms of Service</a></li>
             </ul>
         </div>
     </footer>

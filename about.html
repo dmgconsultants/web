@@ -178,6 +178,7 @@
                         -webkit-font-smoothing: antialiased;
                 }
         </style>
+        <script src="js/language.js" defer></script>
 </head>
 
 <body class="bg-background text-on-background font-body-md antialiased pt-20">
@@ -192,18 +193,18 @@
                 </a>
                 <div class="hidden md:flex gap-8 items-center">
                         <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                                href="index.html">Home</a>
+                                href="index.html" data-key="nav_home">Home</a>
                         <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                                href="services.html">Services</a>
+                                href="services.html" data-key="nav_services">Services</a>
                         <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary dark:border-secondary-fixed-dim pb-1 font-bold hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2"
-                                href="about.html">About</a>
+                                href="about.html" data-key="nav_about">About</a>
                         <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                                href="tax-updates.html">Tax Updates</a>
+                                href="tax-updates.html" data-key="nav_tax_updates">Tax Updates</a>
                         <a class="font-headline-sm text-headline-sm md:font-label-md md:text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors hover:bg-surface-container-low dark:hover:bg-primary-container transition-all scale-95 active:scale-90 transition-transform p-2 rounded"
-                                href="contact.html">Contact</a>
+                                href="contact.html" data-key="nav_contact">Contact</a>
                 </div>
                 <a href="contact.html"
-                        class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-md text-label-md hover:opacity-90 transition-opacity">Request
+                        class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-md text-label-md hover:opacity-90 transition-opacity" data-key="nav_btn_quote">Request
                         a Quotation</a>
                 <button class="md:hidden text-primary p-2">
                         <span class="material-symbols-outlined">menu</span>
@@ -215,12 +216,12 @@
                         class="px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row items-center gap-gutter max-w-container-max mx-auto">
                         <div class="flex-1 space-y-6">
                                 <span
-                                        class="font-label-md text-label-md text-secondary border border-secondary px-3 py-1 rounded-DEFAULT inline-block">OUR
+                                        class="font-label-md text-label-md text-secondary border border-secondary px-3 py-1 rounded-DEFAULT inline-block" data-key="about_hero_tag">OUR
                                         HERITAGE</span>
                                 <h1
-                                        class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">
+                                        class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary" data-key="about_hero_title">
                                         Trust Built on Precision &amp; Experience</h1>
-                                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl" data-key="about_hero_desc">
                                         For over 20 years, DMG Consultants has been the silent architect behind
                                         corporate financial success, offering unparalleled expertise in tax and
                                         accounting.
@@ -244,9 +245,9 @@
                 <!-- Founder Profile (Bento Grid) -->
                 <section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
                         <div class="mb-12">
-                                <h2 class="font-headline-md text-headline-md text-primary mb-4">Leadership Excellence
+                                <h2 class="font-headline-md text-headline-md text-primary mb-4" data-key="about_lead_title">Leadership Excellence
                                 </h2>
-                                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">Guided by decades
+                                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl" data-key="about_lead_desc">Guided by decades
                                         of high-level corporate financial management.</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,_auto)]">
@@ -256,22 +257,22 @@
                                         <div>
                                                 <div class="flex gap-4 mb-6">
                                                         <span
-                                                                class="bg-primary-container text-on-primary-container font-label-md text-label-md px-3 py-1 rounded-DEFAULT">CBA
+                                                                class="bg-primary-container text-on-primary-container font-label-md text-label-md px-3 py-1 rounded-DEFAULT" data-key="about_cba_badge">CBA
                                                                 (CA Sri Lanka)</span>
                                                         <span
-                                                                class="bg-primary-container text-on-primary-container font-label-md text-label-md px-3 py-1 rounded-DEFAULT">AAT
+                                                                class="bg-primary-container text-on-primary-container font-label-md text-label-md px-3 py-1 rounded-DEFAULT" data-key="about_aat_badge">AAT
                                                                 Member</span>
                                                 </div>
-                                                <h3 class="font-headline-md text-headline-md text-primary mb-6">Group
+                                                <h3 class="font-headline-md text-headline-md text-primary mb-6" data-key="about_profile_title">Group
                                                         Accountant Profile</h3>
-                                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6" data-key="about_profile_p1">
                                                         With over 20 years of dedicated experience as a Group
                                                         Accountant, our founder has navigated complex financial
                                                         landscapes for leading corporations. This extensive tenure
                                                         guarantees a deep understanding of corporate finance, strategic
                                                         tax planning, and rigorous compliance.
                                                 </p>
-                                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                                <p class="font-body-md text-body-md text-on-surface-variant" data-key="about_profile_p2">
                                                         Holding esteemed memberships with CA Sri Lanka (CBA) and AAT,
                                                         the leadership embodies the pinnacle of professional accounting
                                                         standards, ensuring every client receives authoritative and
@@ -283,7 +284,7 @@
                                 <div
                                         class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-8 flex flex-col justify-center items-center text-center shadow-[0px_10px_30px_rgba(0,35,102,0.02)]">
                                         <span class="font-display-lg text-display-lg text-secondary mb-2">20+</span>
-                                        <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Years
+                                        <span class="font-label-md text-label-md text-primary uppercase tracking-wider" data-key="about_stat_exp">Years
                                                 Experience</span>
                                 </div>
                                 <!-- Expertise Stat 2 -->
@@ -291,7 +292,7 @@
                                         class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-8 flex flex-col justify-center items-center text-center shadow-[0px_10px_30px_rgba(0,35,102,0.02)]">
                                         <span class="material-symbols-outlined text-[48px] text-secondary mb-4"
                                                 style="font-variation-settings: 'FILL' 1;">assured_workload</span>
-                                        <span class="font-label-md text-label-md text-primary uppercase tracking-wider">Corporate
+                                        <span class="font-label-md text-label-md text-primary uppercase tracking-wider" data-key="about_stat_corp">Corporate
                                                 Excellence</span>
                                 </div>
                         </div>
@@ -307,9 +308,9 @@
                                         <h3
                                                 class="font-headline-sm text-headline-sm text-primary mb-4 flex items-center gap-3">
                                                 <span class="material-symbols-outlined text-secondary">visibility</span>
-                                                Vision
+                                                <span data-key="about_vision_title">Vision</span>
                                         </h3>
-                                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                                        <p class="font-body-lg text-body-lg text-on-surface-variant" data-key="about_vision_desc">
                                                 To be the definitive voice of financial authority, transforming complex
                                                 regulatory landscapes into strategic advantages for our elite clientele,
                                                 ensuring sustained corporate success and legacy building.
@@ -318,9 +319,9 @@
                                 <div class="bg-surface-container-low p-10 rounded-xl border-l-4 border-primary">
                                         <h3
                                                 class="font-headline-sm text-headline-sm text-primary mb-4 flex items-center gap-3">
-                                                <span class="material-symbols-outlined text-primary">flag</span> Mission
+                                                <span class="material-symbols-outlined text-primary">flag</span> <span data-key="about_mission_title">Mission</span>
                                         </h3>
-                                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                                        <p class="font-body-lg text-body-lg text-on-surface-variant" data-key="about_mission_desc">
                                                 To deliver precision-driven tax and accounting solutions engineered on
                                                 absolute trust, rigorous expertise, and an unwavering commitment to
                                                 client prosperity, acting as the bedrock for their financial
@@ -336,35 +337,35 @@
                 <div class="col-span-1 md:col-span-2">
                         <div class="font-headline-sm text-headline-sm font-bold text-secondary-fixed mb-4">DMG
                                 Consultants</div>
-                        <p class="font-body-md text-body-md text-on-primary/80 mb-6 max-w-sm">Professional Tax &amp;
+                        <p class="font-body-md text-body-md text-on-primary/80 mb-6 max-w-sm" data-key="footer_desc">Professional Tax &amp;
                                 Accounting Services. Ragama, Sri Lanka.</p>
-                        <p class="font-body-md text-body-md text-secondary-fixed">© 2026 DMG Consultants. Professional
+                        <p class="font-body-md text-body-md text-secondary-fixed" data-key="footer_copyright">© 2026 DMG Consultants. Professional
                                 Tax &amp; Accounting Services. Ragama, Sri Lanka.</p>
                 </div>
                 <div>
-                        <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider">
+                        <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider" data-key="footer_nav_title">
                                 Navigation</h4>
                         <ul class="space-y-3 font-body-md text-body-md">
                                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="index.html">Home</a></li>
+                                                href="index.html" data-key="nav_home">Home</a></li>
                                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="services.html">Services</a></li>
+                                                href="services.html" data-key="nav_services">Services</a></li>
                                 <li><a class="text-secondary-fixed font-bold opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="about.html">About</a></li>
+                                                href="about.html" data-key="nav_about">About</a></li>
                                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="tax-updates.html">Tax Updates</a></li>
+                                                href="tax-updates.html" data-key="nav_tax_updates">Tax Updates</a></li>
                                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="contact.html">Contact</a></li>
+                                                href="contact.html" data-key="nav_contact">Contact</a></li>
                         </ul>
                 </div>
                 <div>
-                        <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider">Legal
+                        <h4 class="font-label-md text-label-md text-secondary-fixed mb-4 uppercase tracking-wider" data-key="footer_legal_title">Legal
                         </h4>
                         <ul class="space-y-3 font-body-md text-body-md">
                                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="#">Privacy Policy</a></li>
+                                                href="#" data-key="footer_privacy">Privacy Policy</a></li>
                                 <li><a class="text-on-primary/80 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary-fixed"
-                                                href="#">Terms of Service</a></li>
+                                                href="#" data-key="footer_terms">Terms of Service</a></li>
                         </ul>
                 </div>
         </footer>

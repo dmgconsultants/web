@@ -141,6 +141,8 @@
             background: #757682;
         }
     </style>
+    <!-- Language Translation Switcher Engine -->
+    <script src="js/language.js" defer></script>
 </head>
 
 <body class="antialiased min-h-screen flex flex-col pt-20">
@@ -155,18 +157,18 @@
         </a>
         <nav class="hidden md:flex items-center gap-8">
             <a class="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md text-label-md hover:bg-surface-container-low transition-all"
-                href="index.html">Home</a>
+                href="index.html" data-key="nav_home">Home</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
-                href="services.html">Services</a>
+                href="services.html" data-key="nav_services">Services</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
-                href="about.html">About</a>
+                href="about.html" data-key="nav_about">About</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
-                href="tax-updates.html">Tax Updates</a>
+                href="tax-updates.html" data-key="nav_tax_updates">Tax Updates</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-surface-container-low transition-all"
-                href="contact.html">Contact</a>
+                href="contact.html" data-key="nav_contact">Contact</a>
         </nav>
         <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-primary text-on-primary font-label-md text-label-md rounded shadow-sm hover:bg-primary-container transition-all scale-95 active:scale-90"
-            href="#contact">
+            href="#contact" data-key="nav_btn_quote">
             Request a Quotation
         </a>
         <!-- Mobile Menu Icon (Simplified for pure HTML) -->
@@ -192,25 +194,22 @@
                         class="inline-flex items-center gap-2 px-4 py-1.5 border border-secondary/30 bg-secondary/10 rounded-full">
                         <span class="material-symbols-outlined text-secondary text-sm"
                             style="font-variation-settings: 'FILL' 1;">verified</span>
-                        <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">CBA &amp; AAT
-                            Certified</span>
+                        <span class="font-label-md text-label-md text-secondary uppercase tracking-widest" data-key="hero_tag">CBA &amp; AAT Certified</span>
                     </div>
                     <h1
-                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary">
-                        Strategic Tax &amp; Accounting Solutions <br /><span class="text-secondary-fixed-dim">Tailored
-                            for Your Growth.</span>
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary" data-key="hero_title">
+                        Strategic Tax &amp; Accounting Solutions <br /><span class="text-secondary-fixed-dim">Tailored for Your Growth.</span>
                     </h1>
-                    <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl">
-                        Over 20 years of qualified excellence by CA Sri Lanka professionals. We provide high-net-worth
-                        and corporate clients with precise, authoritative financial clarity.
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-2xl" data-key="hero_desc">
+                        Over 20 years of qualified excellence by CA Sri Lanka professionals. We provide high-net-worth and corporate clients with precise, authoritative financial clarity.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 pt-4">
                         <a class="inline-flex items-center justify-center px-8 py-4 bg-secondary text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT hover:bg-secondary-fixed-dim transition-all shadow-[0px_10px_30px_rgba(0,35,102,0.15)]"
-                            href="#contact">
+                            href="#contact" data-key="nav_btn_quote">
                             Request a Quotation
                         </a>
                         <a class="inline-flex items-center justify-center px-8 py-4 border border-outline-variant text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-DEFAULT hover:bg-white/5 transition-all"
-                            href="#services">
+                            href="#services" data-key="hero_btn_explore">
                             Explore Services
                         </a>
                     </div>
@@ -229,43 +228,33 @@
                     <!-- Floating Badge -->
                     <div
                         class="absolute -bottom-8 -right-8 z-20 bg-primary text-on-primary p-8 rounded-DEFAULT shadow-[0px_10px_30px_rgba(0,35,102,0.15)] max-w-xs border border-primary-fixed/20">
-                        <span class="font-display-lg text-display-lg text-secondary-fixed-dim block mb-2">15+</span>
-                        <span class="font-label-md text-label-md uppercase tracking-wider block mb-2">Years
-                            Experience</span>
-                        <p class="font-body-md text-body-md text-primary-fixed-dim">Senior corporate expertise as Group
-                            Accountant navigating complex financial landscapes.</p>
+                        <span class="font-display-lg text-display-lg text-secondary-fixed-dim block mb-2" data-key="about_badge_years">15+</span>
+                        <span class="font-label-md text-label-md uppercase tracking-wider block mb-2" data-key="about_badge_label">Years Experience</span>
+                        <p class="font-body-md text-body-md text-primary-fixed-dim" data-key="about_badge_desc">Senior corporate expertise as Group Accountant navigating complex financial landscapes.</p>
                     </div>
                 </div>
                 <div class="space-y-6 lg:pl-12">
-                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Heritage of
-                        Precision</h2>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Authority Built on Decades of
-                        Corporate Insight</h3>
+                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest" data-key="about_tag">Heritage of Precision</h2>
+                    <h3 class="font-headline-md text-headline-md text-on-surface" data-key="about_title">Authority Built on Decades of Corporate Insight</h3>
                     <div class="w-16 h-px bg-secondary my-8"></div>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">
-                        At DMG Consultants, we move beyond basic compliance. We leverage deep-seated corporate
-                        experience to engineer financial strategies that protect and expand your wealth.
+                    <p class="font-body-lg text-body-lg text-on-surface-variant" data-key="about_p1">
+                        At DMG Consultants, we move beyond basic compliance. We leverage deep-seated corporate experience to engineer financial strategies that protect and expand your wealth.
                     </p>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant">
-                        Our leadership brings over 15 years of rigorous, high-stakes experience as a Group Accountant,
-                        ensuring that every piece of advice is grounded in practical, real-world corporate success. We
-                        treat your financial architecture with the architectural precision it deserves.
+                    <p class="font-body-lg text-body-lg text-on-surface-variant" data-key="about_p2">
+                        Our leadership brings over 15 years of rigorous, high-stakes experience as a Group Accountant, ensuring that every piece of advice is grounded in practical, real-world corporate success. We treat your financial architecture with the architectural precision it deserves.
                     </p>
                     <ul class="space-y-4 pt-6">
                         <li class="flex items-start gap-4">
                             <span class="material-symbols-outlined text-secondary">check_circle</span>
-                            <span class="font-body-md text-body-md text-on-surface">Comprehensive corporate tax
-                                structuring.</span>
+                            <span class="font-body-md text-body-md text-on-surface" data-key="about_li1">Comprehensive corporate tax structuring.</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <span class="material-symbols-outlined text-secondary">check_circle</span>
-                            <span class="font-body-md text-body-md text-on-surface">End-to-end accounting and financial
-                                reporting.</span>
+                            <span class="font-body-md text-body-md text-on-surface" data-key="about_li2">End-to-end accounting and financial reporting.</span>
                         </li>
                         <li class="flex items-start gap-4">
                             <span class="material-symbols-outlined text-secondary">check_circle</span>
-                            <span class="font-body-md text-body-md text-on-surface">Strict adherence to national
-                                compliance standards.</span>
+                            <span class="font-body-md text-body-md text-on-surface" data-key="about_li3">Strict adherence to national compliance standards.</span>
                         </li>
                     </ul>
                 </div>
@@ -275,9 +264,8 @@
         <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="services">
             <div class="max-w-container-max mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Core
-                        Capabilities</h2>
-                    <h3 class="font-headline-md text-headline-md text-on-surface">Precision Engineered Services</h3>
+                    <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest" data-key="services_tag">Core Capabilities</h2>
+                    <h3 class="font-headline-md text-headline-md text-on-surface" data-key="services_title">Precision Engineered Services</h3>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                     <!-- Service 1 -->
@@ -288,12 +276,10 @@
                             <span
                                 class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">account_balance</span>
                         </div>
-                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Corporate Taxation</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Strategic tax planning
-                            and minimization strategies designed for high-net-worth entities and expanding corporations.
-                        </p>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4" data-key="services_card1_title">Corporate Taxation</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow" data-key="services_card1_desc">Strategic tax planning and minimization strategies designed for high-net-worth entities and expanding corporations.</p>
                         <a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors"
-                            href="services.html">
+                            href="services.html" data-key="services_discover">
                             Discover More <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
@@ -309,12 +295,10 @@
                             <span
                                 class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">gavel</span>
                         </div>
-                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Statutory Compliance</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Bulletproof adherence to
-                            CA Sri Lanka and national regulatory frameworks, insulating your business from liability.
-                        </p>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4" data-key="services_card2_title">Statutory Compliance</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow" data-key="services_card2_desc">Bulletproof adherence to CA Sri Lanka and national regulatory frameworks, insulating your business from liability.</p>
                         <a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors"
-                            href="services.html">
+                            href="services.html" data-key="services_discover">
                             Discover More <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
@@ -326,12 +310,10 @@
                             <span
                                 class="material-symbols-outlined text-3xl text-primary group-hover:text-secondary-fixed-dim">calculate</span>
                         </div>
-                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4">Executive Accounting</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">High-level financial
-                            reporting and ledger management utilizing pure, tabular data for immediate executive
-                            clarity.</p>
+                        <h4 class="font-headline-sm text-headline-sm text-on-surface mb-4" data-key="services_card3_title">Executive Accounting</h4>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow" data-key="services_card3_desc">High-level financial reporting and ledger management utilizing pure, tabular data for immediate executive clarity.</p>
                         <a class="mt-8 inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors"
-                            href="services.html">
+                            href="services.html" data-key="services_discover">
                             Discover More <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
@@ -344,12 +326,11 @@
                 <div
                     class="flex flex-col md:flex-row justify-between items-end mb-12 pb-4 border-b border-outline-variant">
                     <div>
-                        <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest mb-2">
-                            Insight &amp; Analysis</h2>
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Latest Tax Updates</h3>
+                        <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest mb-2" data-key="updates_tag">Insight &amp; Analysis</h2>
+                        <h3 class="font-headline-md text-headline-md text-on-surface" data-key="updates_title">Latest Tax Updates</h3>
                     </div>
                     <a class="mt-4 md:mt-0 font-label-md text-label-md text-primary hover:text-secondary inline-flex items-center gap-2"
-                        href="#updates">
+                        href="#updates" data-key="updates_view_all">
                         View All Updates <span class="material-symbols-outlined text-sm">arrow_forward</span>
                     </a>
                 </div>
@@ -364,16 +345,14 @@
                         </div>
                         <div class="flex items-center gap-4 mb-3">
                             <span
-                                class="font-label-md text-label-md text-secondary tracking-widest uppercase">Taxation</span>
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase" data-key="updates_art1_tag">Taxation</span>
                             <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
-                            <span class="font-label-md text-label-md text-on-surface-variant">October 15, 2024</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant" data-key="updates_art1_date">October 15, 2024</span>
                         </div>
                         <h4
-                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors" data-key="updates_art1_title">
                             Implications of the New VAT Amendments for Corporate Entities</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">An executive summary
-                            of how the recent changes to Value Added Tax legislation will impact corporate cash flows in
-                            the upcoming fiscal quarter.</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2" data-key="updates_art1_desc">An executive summary of how the recent changes to Value Added Tax legislation will impact corporate cash flows in the upcoming fiscal quarter.</p>
                     </article>
                     <!-- Update Item -->
                     <article class="group cursor-pointer">
@@ -385,16 +364,15 @@
                         </div>
                         <div class="flex items-center gap-4 mb-3">
                             <span
-                                class="font-label-md text-label-md text-secondary tracking-widest uppercase">Compliance</span>
+                                class="font-label-md text-label-md text-secondary tracking-widest uppercase" data-key="updates_art2_tag">Compliance</span>
                             <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
-                            <span class="font-label-md text-label-md text-on-surface-variant">October 02, 2024</span>
+                            <span class="font-label-md text-label-md text-on-surface-variant" data-key="updates_art2_date">October 02, 2024</span>
                         </div>
                         <h4
-                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                            class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors" data-key="updates_art2_title">
                             Navigating CA Sri Lanka's Updated Reporting Standards</h4>
-                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">A breakdown of the
-                            critical adjustments required for annual financial reports to maintain absolute compliance
-                            with the revised national guidelines.</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2" data-key="updates_art2_desc">A breakdown of the critical adjustments required for annual financial reports to maintain absolute compliance with the revised national guidelines.</p>
+                    </article>
                     </article>
                 </div>
             </div>
@@ -404,39 +382,30 @@
             <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
                 <!-- Contact Info -->
                 <div class="lg:col-span-5 space-y-8">
-                    <h2 class="font-headline-sm text-headline-sm text-secondary-fixed-dim uppercase tracking-widest">
-                        Engage Our Firm</h2>
-                    <h3 class="font-display-lg-mobile text-display-lg-mobile text-on-primary">Secure a Professional
-                        Consultation.</h3>
-                    <p class="font-body-lg text-body-lg text-primary-fixed-dim pb-8">
-                        Connect with DMG Consultants to establish a bespoke financial strategy tailored to your exact
-                        corporate or individual requirements.
-                    </p>
+                    <h2 class="font-headline-sm text-headline-sm text-secondary-fixed-dim uppercase tracking-widest" data-key="contact_tag">Engage Our Firm</h2>
+                    <h3 class="font-display-lg-mobile text-display-lg-mobile text-on-primary" data-key="contact_title">Secure a Professional Consultation.</h3>
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim pb-8" data-key="contact_desc">Connect with DMG Consultants to establish a bespoke financial strategy tailored to your exact corporate or individual requirements.</p>
                     <div class="space-y-6">
                         <div class="flex items-start gap-4">
                             <span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">location_on</span>
                             <div>
-                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Corporate Office
-                                </h4>
-                                <p class="font-body-md text-body-md text-primary-fixed-dim">Ragama, Sri Lanka</p>
+                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1" data-key="contact_office_title">Corporate Office</h4>
+                                <p class="font-body-md text-body-md text-primary-fixed-dim" data-key="contact_office_desc">Ragama, Sri Lanka</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <span class="material-symbols-outlined text-secondary-fixed-dim text-2xl">mail</span>
                             <div>
-                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Direct
-                                    Communication</h4>
-                                <p class="font-body-md text-body-md text-primary-fixed-dim">dmgtaxconsultants@gmail.com
-                                </p>
+                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1" data-key="contact_comm_title">Direct Communication</h4>
+                                <p class="font-body-md text-body-md text-primary-fixed-dim" data-key="contact_comm_desc">dmgtaxconsultants@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <span
                                 class="material-symbols-outlined text-secondary-fixed-dim text-2xl">phone_in_talk</span>
                             <div>
-                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1">Consultation Line
-                                </h4>
-                                <p class="font-body-md text-body-md text-primary-fixed-dim">0782337999</p>
+                                <h4 class="font-label-md text-label-md uppercase tracking-wider mb-1" data-key="contact_phone_title">Consultation Line</h4>
+                                <p class="font-body-md text-body-md text-primary-fixed-dim" data-key="contact_phone_desc">0782337999</p>
                             </div>
                         </div>
                     </div>
@@ -450,53 +419,53 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="relative group">
                                 <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
-                                    for="firstName">First Name</label>
+                                    for="firstName" data-key="form_first_name">First Name</label>
                                 <input
                                     class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
                                     id="firstName" name="First Name" placeholder="Enter your first name" type="text"
-                                    required />
+                                    data-key="form_first_name" required />
                             </div>
                             <div class="relative group">
                                 <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
-                                    for="lastName">Last Name</label>
+                                    for="lastName" data-key="form_last_name">Last Name</label>
                                 <input
                                     class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
                                     id="lastName" name="Last Name" placeholder="Enter your last name" type="text"
-                                    required />
+                                    data-key="form_last_name" required />
                             </div>
                         </div>
                         <div class="relative group">
                             <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
-                                for="email">Corporate Email</label>
+                                for="email" data-key="form_email">Corporate Email</label>
                             <input
                                 class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors"
-                                id="email" name="email" placeholder="name@company.com" type="email" required />
+                                id="email" name="email" placeholder="name@company.com" type="email" data-key="form_email" required />
                         </div>
                         <div class="relative group">
                             <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
-                                for="service">Service of Interest</label>
+                                for="service" data-key="form_service">Service of Interest</label>
                             <select
                                 class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors text-on-surface"
                                 id="service" name="Service" required>
-                                <option disabled="" selected="" value="">Select a primary service</option>
-                                <option value="tax">Corporate Taxation</option>
-                                <option value="compliance">Statutory Compliance</option>
-                                <option value="accounting">Executive Accounting</option>
-                                <option value="other">Other Inquiry</option>
+                                <option disabled="" selected="" value="" data-key="form_service_ph">Select a primary service</option>
+                                <option value="tax" data-key="form_service_tax">Corporate Taxation</option>
+                                <option value="compliance" data-key="form_service_compliance">Statutory Compliance</option>
+                                <option value="accounting" data-key="form_service_accounting">Executive Accounting</option>
+                                <option value="other" data-key="form_service_other">Other Inquiry</option>
                             </select>
                         </div>
                         <div class="relative group">
                             <label class="block font-label-md text-label-md text-on-surface-variant mb-2"
-                                for="message">Brief Context</label>
+                                for="message" data-key="form_msg">Brief Context</label>
                             <textarea
                                 class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-secondary px-0 py-2 font-body-md text-body-md transition-colors resize-none"
                                 id="message" name="Message"
                                 placeholder="Provide details regarding your financial requirements..." rows="3"
-                                required></textarea>
+                                data-key="form_msg" required></textarea>
                         </div>
                         <button
                             class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded hover:bg-primary-container transition-colors shadow-sm mt-4"
-                            type="submit">
+                            type="submit" data-key="form_btn_submit">
                             Submit Request
                         </button>
                     </form>
@@ -509,32 +478,32 @@
         class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-primary text-secondary-fixed font-body-md text-body-md border-t border-on-primary-fixed-variant">
         <div class="col-span-1 md:col-span-1 flex flex-col gap-4">
             <span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">DMG Consultants</span>
-            <p class="text-on-primary/80 opacity-80 hover:opacity-100 transition-opacity max-w-xs">
+            <p class="text-on-primary/80 opacity-80 hover:opacity-100 transition-opacity max-w-xs" data-key="footer_copyright">
                 © 2026 DMG Consultants. Professional Tax &amp; Accounting Services. Ragama, Sri Lanka.
             </p>
         </div>
         <div class="col-span-1 flex flex-col gap-3">
-            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Navigation</h4>
+            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2" data-key="footer_nav_title">Navigation</h4>
             <a class="text-secondary-fixed font-bold hover:underline decoration-secondary-fixed"
-                href="index.html">Home</a>
+                href="index.html" data-key="nav_home">Home</a>
             <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
-                href="services.html">Services</a>
+                href="services.html" data-key="nav_services">Services</a>
             <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
-                href="about.html">About</a>
+                href="about.html" data-key="nav_about">About</a>
         </div>
         <div class="col-span-1 flex flex-col gap-3">
-            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Resources</h4>
+            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2" data-key="footer_res_title">Resources</h4>
             <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
-                href="tax-updates.html">Tax Updates</a>
+                href="tax-updates.html" data-key="nav_tax_updates">Tax Updates</a>
             <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
-                href="contact.html">Contact</a>
+                href="contact.html" data-key="nav_contact">Contact</a>
         </div>
         <div class="col-span-1 flex flex-col gap-3">
-            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2">Legal</h4>
+            <h4 class="font-label-md text-label-md text-secondary-fixed uppercase tracking-widest mb-2" data-key="footer_legal_title">Legal</h4>
             <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
-                href="#">Privacy Policy</a>
+                href="#" data-key="footer_privacy">Privacy Policy</a>
             <a class="text-on-primary/80 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed"
-                href="#">Terms of Service</a>
+                href="#" data-key="footer_terms">Terms of Service</a>
         </div>
     </footer>
 </body>
