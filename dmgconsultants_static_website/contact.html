@@ -115,9 +115,9 @@
 <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-secondary-fixed-dim transition-colors py-2" href="tax-updates.html">Tax Updates</a>
 <a class="text-secondary dark:text-secondary-fixed-dim border-b-2 border-secondary dark:border-secondary-fixed-dim pb-1 font-bold py-2" href="contact.html">Contact</a>
 </div>
-<button class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-primary/90 transition-colors">
+<a href="#quotation-form" class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded hover:bg-primary/90 transition-colors">
             Request a Quotation
-        </button>
+        </a>
 <button class="md:hidden text-primary">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
 </button>
@@ -171,30 +171,32 @@
 <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
 <h2 class="font-headline-sm text-headline-sm text-primary mb-2">Request a Quotation</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8">Please provide your details and requirements. Our senior consultants will respond within 24 hours.</p>
-<form class="space-y-6">
+<form id="quotation-form" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="7fec54ae-7294-4e73-98d4-a5ab1df25245">
+<input type="hidden" name="subject" value="New Quotation Request from DMG Website">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface" for="fullName">Full Name</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="fullName" placeholder="John Doe" type="text"/>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="fullName" name="Full Name" placeholder="John Doe" type="text" required/>
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface" for="company">Company Name</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="company" placeholder="Acme Corp" type="text"/>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="company" name="Company" placeholder="Acme Corp" type="text"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface" for="email">Corporate Email</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="email" placeholder="john@acme.com" type="email"/>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="email" name="email" placeholder="john@acme.com" type="email" required/>
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface" for="phone">Contact Number</label>
-<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="phone" placeholder="+94 77 ..." type="tel"/>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-2 px-0" id="phone" name="Phone" placeholder="+94 77 ..." type="tel" required/>
 </div>
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface" for="service">Service Required</label>
-<select class="w-full border border-outline-variant rounded bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-3 px-4 text-on-surface-variant" id="service">
+<select class="w-full border border-outline-variant rounded bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-3 px-4 text-on-surface-variant" id="service" name="Service" required>
 <option value="">Select a service category</option>
 <option value="tax">Tax Advisory &amp; Compliance</option>
 <option value="audit">Corporate Auditing</option>
@@ -204,7 +206,7 @@
 </div>
 <div class="space-y-2">
 <label class="font-label-md text-label-md text-on-surface" for="message">Project Details</label>
-<textarea class="w-full border border-outline-variant rounded bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-3 px-4 resize-none" id="message" placeholder="Please describe your requirements in detail..." rows="4"></textarea>
+<textarea class="w-full border border-outline-variant rounded bg-transparent focus:ring-0 focus:border-secondary transition-colors font-body-md text-body-md py-3 px-4 resize-none" id="message" name="Message" placeholder="Please describe your requirements in detail..." rows="4" required></textarea>
 </div>
 <button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded w-full hover:bg-primary/90 transition-colors mt-8" type="submit">
                     Submit Request
